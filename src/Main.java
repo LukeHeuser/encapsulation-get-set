@@ -4,6 +4,7 @@ public class Main {
         // Unsightly code, but serves to make the point/ premise of creating an object.
         // By using getters and setters to access the private fields of the class/ blueprint.
         // We can instantiate an object of type Motorcycle and add value to the fields.
+
         Motorcycle motorcycle = new Motorcycle();
         motorcycle.setMake("Honda");
         motorcycle.setModel("CBR600 RR");
