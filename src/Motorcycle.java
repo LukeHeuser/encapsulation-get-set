@@ -5,7 +5,7 @@ public class Motorcycle {
     private String model = "CBR600RR";
     private String color = "Red";
     private int horsePower = 125;
-    private boolean bike = true;
+    private boolean superBike = true;
 
     public String getMake() {
         return make;
@@ -23,8 +23,8 @@ public class Motorcycle {
         return horsePower;
     }
 
-    public boolean isBike() {
-        return bike;
+    public boolean isSuperBike() {
+        return superBike;
     }
 
     public void setMake(String make) {
@@ -55,7 +55,7 @@ public class Motorcycle {
     }
 
     public void setSuperSport(boolean bike) {
-        this.bike = bike;
+        this.superBike = bike;
     }
 
     public void describeMotorcycle() { // this method is not static because
@@ -65,7 +65,7 @@ public class Motorcycle {
                 color + " " +
                 make + " " +
                 model + " " +
-                (bike ? "Super Sport" : ""));
+                (superBike ? "Super Sport" : ""));
 
     }
 
