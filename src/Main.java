@@ -15,7 +15,6 @@ public class Main {
         System.out.println("Model = " + motorcycle.getModel());
         motorcycle.describeMotorcycle();
 
-
         Motorcycle suzuki = new Motorcycle();
         suzuki.setMake("Suzuki");
         suzuki.setModel("GSXR 600");
