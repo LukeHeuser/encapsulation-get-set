@@ -28,7 +28,7 @@ public class Motorcycle {
     }
 
     public void setMake(String make) {
-        // this.make = make; // Tells java it wants to update the field 'private String make'
+        // this.make = make; Tells java it wants to update the field 'private String make'
                           // with the contents of the parameter `make` that was passed to the method
 
         if (make == null) make = "unknown"; // Allows the information to be tested before returned to the user
@@ -59,7 +59,7 @@ public class Motorcycle {
     }
 
     public void describeMotorcycle() { // this method is not static because
-                                // it is accessing instance fields on the class
+                                       // it is accessing instance fields on the class
 
         System.out.println(horsePower + ": Horsepower " +
                 color + " " +
