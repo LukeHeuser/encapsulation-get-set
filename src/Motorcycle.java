@@ -7,6 +7,33 @@ public class Motorcycle {
     private int horsePower = 125;
     private boolean superBike = true;
 
+
+    public void describeMotorcycle() { // this method is not static because
+        // it is accessing instance fields on the class
+
+        System.out.println(horsePower + ": Horsepower " +
+                color + " " +
+                make + " " +
+                model + " " +
+                (superBike ? "Super Sport" : ""));
+
+    }
+    public void setMake(String make) {
+        // this.make = make; Tells java it wants to update the field 'private String make'
+        // with the contents of the parameter `make` that was passed to the method
+
+        if (make == null) make = "unknown"; // Allows the information to be tested before returned to the user
+        String lowercaseMake = make.toLowerCase();
+        switch (lowercaseMake){
+            case "honda", "suzuki", "yamaha", "kawasaki" -> this.make = make;
+            default -> {
+                this.make = "Unsupported";
+            }
+        }
+
+    }
+
+
     public String getMake() {
         return make;
     }
@@ -27,20 +54,7 @@ public class Motorcycle {
         return superBike;
     }
 
-    public void setMake(String make) {
-        // this.make = make; Tells java it wants to update the field 'private String make'
-                          // with the contents of the parameter `make` that was passed to the method
 
-        if (make == null) make = "unknown"; // Allows the information to be tested before returned to the user
-        String lowercaseMake = make.toLowerCase();
-        switch (lowercaseMake){
-            case "honda", "suzuki", "yamaha", "kawasaki" -> this.make = make;
-            default -> {
-                this.make = "Unsupported";
-            }
-        }
-
-    }
 
     public void setModel(String model) {
         this.model = model;
@@ -58,15 +72,5 @@ public class Motorcycle {
         this.superBike = bike;
     }
 
-    public void describeMotorcycle() { // this method is not static because
-                                       // it is accessing instance fields on the class
-
-        System.out.println(horsePower + ": Horsepower " +
-                color + " " +
-                make + " " +
-                model + " " +
-                (superBike ? "Super Sport" : ""));
-
-    }
 
 }
